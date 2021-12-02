@@ -20,45 +20,22 @@ def slidingsum(data):
 
 print("#--- Sonar Sweep: part1 ---#")
 
-assert (
-    increases(
-        [
-            199,
-            200,
-            208,
-            210,
-            200,
-            207,
-            240,
-            269,
-            260,
-            263,
-        ]
-    )
-    == 7
-)
-
+testdata = [
+    199,
+    200,
+    208,
+    210,
+    200,
+    207,
+    240,
+    269,
+    260,
+    263,
+]
+assert increases(testdata) == 7
 print(increases(read_file_int("01.txt")))
-
 
 print("#--- Sonar Sweep: part2 ---#")
 
-assert (
-    slidingsum(
-        [
-            199,
-            200,
-            208,
-            210,
-            200,
-            207,
-            240,
-            269,
-            260,
-            263,
-        ]
-    )
-    == 5
-)
-
+assert slidingsum(testdata) == 5
 print(slidingsum(read_file_int("01.txt")))
