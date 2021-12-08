@@ -33,7 +33,7 @@ def move_with_aim(instructions):
     return hpos * depth
 
 
-print("#--- Day 2: Dive: part1 ---#")
+print("#--- Day 2: Dive: part1:", end=" ")
 
 testdata = """
 forward 5
@@ -48,7 +48,7 @@ assert move(testdata) == 150
 print(move(slurp("02.txt")))
 
 
-print("#--- Day 2: Dive: part2 ---#")
+print("#--- Day 2: Dive: part2:", end=" ")
 
 assert move_with_aim(testdata) == 900
 print(move_with_aim(slurp("02.txt")))

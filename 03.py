@@ -64,7 +64,7 @@ def life_support_rating(data):
     return int(data_ogr[0], 2) * int(data_csr[0], 2)
 
 
-print("#--- Day 3: Binary Diagnostic: part1 ---#")
+print("#--- Day 3: Binary Diagnostic: part1:", end=" ")
 
 testdata = """
 00100
@@ -85,7 +85,7 @@ assert power_consumption(testdata) == 198
 print(power_consumption(slurp("03.txt")))
 
 
-print("#--- Day 3: Binary Diagnostic: part2 ---#")
+print("#--- Day 3: Binary Diagnostic: part2:", end=" ")
 
 assert life_support_rating(testdata) == 230
 print(life_support_rating(slurp("03.txt")))

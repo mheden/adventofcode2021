@@ -13,7 +13,7 @@ def part1(data):
     return count
 
 
-print("#--- Day 8: Seven Segment Search: part1 ---#")
+print("#--- Day 8: Seven Segment Search: part1:", end=" ")
 
 testdata = """
 be cfbegad cbdgef fgaecd cgeb fdcge agebfd fecdb fabcd edb | fdgacbe cefdb cefbgd gcbe
@@ -32,7 +32,7 @@ assert part1(testdata) == 26
 print(part1(slurp("08.txt")))
 
 
-print("#--- Day 8: Seven Segment Search: part2 ---#")
+print("#--- Day 8: Seven Segment Search: part2:", end=" ")
 
 #  assert part2(testdata) == 61229
 #  print(part2(slurp("08.txt")))

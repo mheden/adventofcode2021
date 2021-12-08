@@ -16,7 +16,7 @@ def num_fishes(data, days=80):
     return sum(fishes)
 
 
-print("#--- Day 6: Lanternfish: part1 ---#")
+print("#--- Day 6: Lanternfish: part1:", end=" ")
 
 testdata = "3,4,3,1,2"
 
@@ -24,7 +24,7 @@ assert num_fishes(testdata) == 5934
 print(num_fishes(slurp("06.txt")))
 
 
-print("#--- Day 6: Lanternfish: part2 ---#")
+print("#--- Day 6: Lanternfish: part2:", end=" ")
 
 assert num_fishes(testdata, 256) == 26984457539
 print(num_fishes(slurp("06.txt"), 256))

@@ -18,7 +18,7 @@ def slidingsum(data):
     return increases(sums)
 
 
-print("#--- Day 1: Sonar Sweep: part1 ---#")
+print("#--- Day 1: Sonar Sweep: part1:", end=" ")
 
 testdata = """
 199
@@ -36,7 +36,7 @@ testdata = """
 assert increases(unpack(testdata, fn=int)) == 7
 print(increases(unpack(slurp("01.txt"), fn=int)))
 
-print("#--- Day 1: Sonar Sweep: part2 ---#")
+print("#--- Day 1: Sonar Sweep: part2:", end=" ")
 
 assert slidingsum(unpack(testdata, fn=int)) == 5
 print(slidingsum(unpack(slurp("01.txt"), fn=int)))

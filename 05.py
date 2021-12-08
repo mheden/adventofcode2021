@@ -7,8 +7,6 @@ def part1(data):
     lines = []
     for row in data:
         p1, _, p2 = row.split(" ")
-        p1x, p1y = p1.split(",")
-        p2x, p2y = p2.split(",")
         lines.append((P2d(*p1.split(",")), P2d(*p2.split(","))))
 
     grid = defaultdict(int)
@@ -32,8 +30,6 @@ def part2(data):
     lines = []
     for row in data:
         p1, _, p2 = row.split(" ")
-        p1x, p1y = p1.split(",")
-        p2x, p2y = p2.split(",")
         lines.append((P2d(*p1.split(",")), P2d(*p2.split(","))))
 
     grid = defaultdict(int)
@@ -50,7 +46,7 @@ def part2(data):
     return len([x for x in grid.values() if x > 1])
 
 
-print("#--- Day 5: Hydrothermal Venture: part1 ---#")
+print("#--- Day 5: Hydrothermal Venture: part1:", end=" ")
 
 testdata = """
 0,9 -> 5,9
@@ -68,7 +64,7 @@ testdata = """
 assert part1(testdata) == 5
 print(part1(slurp("05.txt")))
 
-print("#--- Day 5: Hydrothermal Venture: part2 ---#")
+print("#--- Day 5: Hydrothermal Venture: part2:", end=" ")
 
 assert part2(testdata) == 12
 print(part2(slurp("05.txt")))

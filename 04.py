@@ -73,7 +73,7 @@ def part2(data):
                     return number * sum_of_umarked_numbers(board, drawn)
 
 
-print("#--- Day 4: Giant Squid: part1 ---#")
+print("#--- Day 4: Giant Squid: part1:", end=" ")
 
 testdata = """
 7,4,9,5,11,17,23,2,0,14,21,24,10,16,13,6,15,25,12,22,18,20,8,19,3,26,1
@@ -101,7 +101,7 @@ assert part1(testdata) == 4512
 print(part1(slurp("04.txt")))
 
 
-print("#--- Day 4: Giant Squid: part2 ---#")
+print("#--- Day 4: Giant Squid: part2:", end=" ")
 
 assert part2(testdata) == 1924
 print(part2(slurp("04.txt")))
