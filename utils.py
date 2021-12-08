@@ -33,7 +33,7 @@ def manhattan_distance(p0, p1):
 
 
 def unpack(data, sep="\n", fn=str):
-    sections = data.rstrip().split(sep)
+    sections = data.strip().split(sep)
     return [fn(section) for section in sections]
 
 

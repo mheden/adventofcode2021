@@ -1,4 +1,4 @@
-from utils import read_file_int
+from utils import slurp, unpack
 
 
 def increases(data):
@@ -18,24 +18,25 @@ def slidingsum(data):
     return increases(sums)
 
 
-print("#--- Sonar Sweep: part1 ---#")
+print("#--- Day 1: Sonar Sweep: part1 ---#")
 
-testdata = [
-    199,
-    200,
-    208,
-    210,
-    200,
-    207,
-    240,
-    269,
-    260,
-    263,
-]
-assert increases(testdata) == 7
-print(increases(read_file_int("01.txt")))
+testdata = """
+199
+200
+208
+210
+200
+207
+240
+269
+260
+263
+"""
 
-print("#--- Sonar Sweep: part2 ---#")
+assert increases(unpack(testdata, fn=int)) == 7
+print(increases(unpack(slurp("01.txt"), fn=int)))
 
-assert slidingsum(testdata) == 5
-print(slidingsum(read_file_int("01.txt")))
+print("#--- Day1: Sonar Sweep: part2 ---#")
+
+assert slidingsum(unpack(testdata, fn=int)) == 5
+print(slidingsum(unpack(slurp("01.txt"), fn=int)))

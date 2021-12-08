@@ -52,7 +52,8 @@ def part2(data):
 
 print("#--- Day 5: Hydrothermal Venture: part1 ---#")
 
-testdata = """0,9 -> 5,9
+testdata = """
+0,9 -> 5,9
 8,0 -> 0,8
 9,4 -> 3,4
 2,2 -> 2,1
@@ -61,7 +62,8 @@ testdata = """0,9 -> 5,9
 0,9 -> 2,9
 3,4 -> 1,4
 0,0 -> 8,8
-5,5 -> 8,2"""
+5,5 -> 8,2
+"""
 
 assert part1(testdata) == 5
 print(part1(slurp("05.txt")))

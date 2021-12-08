@@ -1,4 +1,4 @@
-from utils import read_file
+from utils import slurp, unpack
 
 movements = {
     "down": (0, 1),
@@ -8,6 +8,7 @@ movements = {
 
 
 def move(instructions):
+    instructions = unpack(instructions)
     hpos, depth = 0, 0
     for ins in instructions:
         move, amount = ins.split(" ")
@@ -18,6 +19,7 @@ def move(instructions):
 
 
 def move_with_aim(instructions):
+    instructions = unpack(instructions)
     hpos = 0
     depth = 0
     aim = 0
@@ -31,21 +33,22 @@ def move_with_aim(instructions):
     return hpos * depth
 
 
-print("#--- Dive: part1 ---#")
+print("#--- Day 2: Dive: part1 ---#")
 
-testdata = [
-    "forward 5",
-    "down 5",
-    "forward 8",
-    "up 3",
-    "down 8",
-    "forward 2",
-]
+testdata = """
+forward 5
+down 5
+forward 8
+up 3
+down 8
+forward 2
+"""
+
 assert move(testdata) == 150
-print(move(read_file("02.txt")))
+print(move(slurp("02.txt")))
 
 
-print("#--- Dive: part2 ---#")
+print("#--- Day 2: Dive: part2 ---#")
 
 assert move_with_aim(testdata) == 900
-print(move_with_aim(read_file("02.txt")))
+print(move_with_aim(slurp("02.txt")))
