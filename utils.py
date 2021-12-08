@@ -2,12 +2,44 @@ from collections import namedtuple
 
 BIGNUM = 10 ** 100
 
-Point2d = namedtuple("Point2d", ["x", "y"])
-Point3d = namedtuple("Point3d", ["x", "y", "z"])
+
+class P2d:
+    def __init__(self, x, y):
+        self.x = int(x)
+        self.y = int(y)
+
+    def pos(self):
+        return (self.x, self.y)
+
+    def __repr__(self):
+        return f"P2d(%d, %d)" % (self.x, self.y)
+
+
+def lmap(op, array):
+    return list(map(op, array))
+
+
+def sign(n):
+    if n > 0:
+        return 1
+    elif n < 0:
+        return -1
+    else:
+        return 0
 
 
 def manhattan_distance(p0, p1):
     return sum(abs(a - b) for a, b in zip(p0, p1))
+
+
+def unpack(data, sep="\n", fn=str):
+    sections = data.rstrip().split(sep)
+    return [fn(section) for section in sections]
+
+
+def slurp(filename):
+    with open(filename) as f:
+        return f.read().rstrip()
 
 
 def read_file(filename):
