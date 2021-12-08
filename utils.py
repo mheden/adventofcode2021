@@ -1,5 +1,3 @@
-from collections import namedtuple
-
 BIGNUM = 10 ** 100
 
 
@@ -12,7 +10,7 @@ class P2d:
         return (self.x, self.y)
 
     def __repr__(self):
-        return f"P2d(%d, %d)" % (self.x, self.y)
+        return "P2d(%d, %d)" % (self.x, self.y)
 
 
 def lmap(op, array):

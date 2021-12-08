@@ -1,4 +1,4 @@
-from utils import lmap, slurp, unpack
+from utils import slurp, unpack
 from statistics import median, mean
 
 
