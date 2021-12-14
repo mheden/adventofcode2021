@@ -53,11 +53,9 @@ b-end
 filedata = slurp("12.txt")
 
 print("#--- Day 12: Passage Pathing: part1:", end=" ")
-
 assert part1(testdata) == 10
 print(part1(filedata))
 
 print("#--- Day 12: Passage Pathing: part2:", end=" ")
-
 assert part2(testdata) == 36
 print(part2(filedata))

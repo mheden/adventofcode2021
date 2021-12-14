@@ -58,11 +58,9 @@ CN -> C
 filedata = slurp("14.txt")
 
 print("#--- Day 14: Extended Polymerization: part1:", end=" ")
-
 assert solve(testdata, 10) == 1588
 print(solve(filedata, 10))
 
 print("#--- Day 14: Extended Polymerization: part2:", end=" ")
-
 assert solve(testdata, 40) == 2188189693529
 print(solve(filedata, 40))
