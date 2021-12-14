@@ -26,6 +26,10 @@ def sign(n: int) -> int:
         return 0
 
 
+def unique(lst):
+    return list(dict.fromkeys(lst))
+
+
 def manhattan_distance(p0, p1) -> int:
     return sum(abs(a - b) for a, b in zip(p0, p1))
 
