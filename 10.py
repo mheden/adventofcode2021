@@ -68,8 +68,6 @@ def part2(data):
     return median(scores)
 
 
-print("#--- Day 10: Syntax Scoring: part1:", end=" ")
-
 testdata = """
 [({(<(())[]>[[{[]{<()<>>
 [(()[<>])]({[<{<<[]>>(
@@ -82,10 +80,12 @@ testdata = """
 <{([([[(<>()){}]>(<<{{
 <{([{{}}[<[[[<>{}]]]>[]]
 """
+filedata = slurp("10.txt")
 
+print("#--- Day 10: Syntax Scoring: part1:", end=" ")
 assert part1(testdata) == 26397
-print(part1(slurp("10.txt")))
+print(part1(filedata))
 
 print("#--- Day 10: Syntax Scoring: part2:", end=" ")
 assert part2(testdata) == 288957
-print(part2(slurp("10.txt")))
+print(part2(filedata))

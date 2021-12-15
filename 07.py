@@ -25,14 +25,13 @@ def part2(data):
     return min(sum_hi, sum_lo)
 
 
-print("#--- Day 7: The Treachery of Whales: part1:", end=" ")
-
 testdata = "16,1,2,0,4,2,7,1,2,14"
+filedata = slurp("07.txt")
 
+print("#--- Day 7: The Treachery of Whales: part1:", end=" ")
 assert part1(testdata) == 37
-print(part1(slurp("07.txt")))
+print(part1(filedata))
 
 print("#--- Day 7: The Treachery of Whales: part2:", end=" ")
-
 assert part2(testdata) == 168
-print(part2(slurp("07.txt")))
+print(part2(filedata))

@@ -78,8 +78,6 @@ def part2(data):
             return step
 
 
-print("#--- Day 11: Dumbo Octopus: part1:", end=" ")
-
 testdata = """
 5483143223
 2745854711
@@ -92,11 +90,12 @@ testdata = """
 4846848554
 5283751526
 """
-
-assert part1(testdata, 100) == 1656
-print(part1(slurp("11.txt"), 100))
+filedata = slurp("11.txt")
 
 print("#--- Day 11: Dumbo Octopus: part1:", end=" ")
+assert part1(testdata, 100) == 1656
+print(part1(filedata, 100))
 
+print("#--- Day 11: Dumbo Octopus: part1:", end=" ")
 assert part2(testdata) == 195
-print(part2(slurp("11.txt")))
+print(part2(filedata))

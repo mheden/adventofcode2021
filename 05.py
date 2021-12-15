@@ -46,8 +46,6 @@ def part2(data):
     return len([x for x in grid.values() if x > 1])
 
 
-print("#--- Day 5: Hydrothermal Venture: part1:", end=" ")
-
 testdata = """
 0,9 -> 5,9
 8,0 -> 0,8
@@ -60,11 +58,12 @@ testdata = """
 0,0 -> 8,8
 5,5 -> 8,2
 """
+filedata = slurp("05.txt")
 
+print("#--- Day 5: Hydrothermal Venture: part1:", end=" ")
 assert part1(testdata) == 5
-print(part1(slurp("05.txt")))
+print(part1(filedata))
 
 print("#--- Day 5: Hydrothermal Venture: part2:", end=" ")
-
 assert part2(testdata) == 12
-print(part2(slurp("05.txt")))
+print(part2(filedata))

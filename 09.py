@@ -64,8 +64,6 @@ def part2(data):
     return math.prod(sorted(basins, reverse=True)[0:3])
 
 
-print("#--- Day 9: Smoke Basin: part1:", end=" ")
-
 testdata = """
 2199943210
 3987894921
@@ -73,11 +71,12 @@ testdata = """
 8767896789
 9899965678
 """
+filedata = slurp("09.txt")
 
+print("#--- Day 9: Smoke Basin: part1:", end=" ")
 assert part1(testdata) == 15
-print(part1(slurp("09.txt")))
+print(part1(filedata))
 
 print("#--- Day 9: Smoke Basin: part2:", end=" ")
-
 assert part2(testdata) == 1134
-print(part2(slurp("09.txt")))
+print(part2(filedata))

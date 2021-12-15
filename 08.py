@@ -60,8 +60,6 @@ def part2(data):
     return sum_
 
 
-print("#--- Day 8: Seven Segment Search: part1:", end=" ")
-
 testdata = """
 be cfbegad cbdgef fgaecd cgeb fdcge agebfd fecdb fabcd edb | fdgacbe cefdb cefbgd gcbe
 edbfga begcd cbg gc gcadebf fbgde acbgfd abcde gfcbed gfec | fcgedb cgb dgebacf gc
@@ -74,11 +72,12 @@ bdfegc cbegaf gecbf dfcage bdacg ed bedf ced adcbefg gebcd | ed bcgafe cdgba cbg
 egadfb cdbfeg cegd fecab cgb gbdefca cg fgcdab egfdb bfceg | gbdfcae bgc cg cgb
 gcafb gcf dcaebfg ecagb gf abcdeg gaef cafbge fdbac fegbdc | fgae cfgab fg bagce
 """
+filedata = slurp("08.txt")
 
+print("#--- Day 8: Seven Segment Search: part1:", end=" ")
 assert part1(testdata) == 26
-print(part1(slurp("08.txt")))
+print(part1(filedata))
 
 print("#--- Day 8: Seven Segment Search: part2:", end=" ")
-
 assert part2(testdata) == 61229
-print(part2(slurp("08.txt")))
+print(part2(filedata))
