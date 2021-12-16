@@ -13,6 +13,21 @@ class P2d:
         return "P2d(%d, %d)" % (self.x, self.y)
 
 
+def neighbours(x, y, grid):
+    """Return the coordinates and value of all neighbours of (x, y)"""
+    n = set()
+    for dx, dy in [(0, 1), (0, -1), (1, 0), (-1, 0)]:
+        try:
+            n.add((x + dx, y + dy, grid[(x + dx, y + dy)]))
+        except KeyError:
+            pass
+    return n
+
+
+def nibble_to_bin(hexchar):
+    return bin(int(hexchar, 16))[2:].zfill(4)
+
+
 def lmap(op, array):
     return list(map(op, array))
 
